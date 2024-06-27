@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CalculadoraChurrasco
 {
-    public partial class Form1 : Form
+    public partial class frmChurrasco : Form
     {
-        public Form1()
+        public frmChurrasco()
         {
             InitializeComponent();
         }

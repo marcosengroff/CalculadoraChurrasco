@@ -51,10 +51,10 @@
             this.txtMaminha = new System.Windows.Forms.TextBox();
             this.txtLinguica = new System.Windows.Forms.TextBox();
             this.gpOutros = new System.Windows.Forms.GroupBox();
-            this.txtPaes = new System.Windows.Forms.TextBox();
-            this.txtCarvao = new System.Windows.Forms.TextBox();
-            this.txtFarofa = new System.Windows.Forms.TextBox();
             this.txtGelo = new System.Windows.Forms.TextBox();
+            this.txtFarofa = new System.Windows.Forms.TextBox();
+            this.txtCarvao = new System.Windows.Forms.TextBox();
+            this.txtPaes = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numPessoas)).BeginInit();
             this.gpCarnes.SuspendLayout();
             this.gpOutros.SuspendLayout();
@@ -105,6 +105,7 @@
             this.cbFrango.TabIndex = 5;
             this.cbFrango.Text = "Frango";
             this.cbFrango.UseVisualStyleBackColor = true;
+            this.cbFrango.CheckedChanged += new System.EventHandler(this.cbFrango_CheckedChanged);
             // 
             // cbMaminha
             // 
@@ -115,6 +116,7 @@
             this.cbMaminha.TabIndex = 6;
             this.cbMaminha.Text = "Maminha";
             this.cbMaminha.UseVisualStyleBackColor = true;
+            this.cbMaminha.CheckedChanged += new System.EventHandler(this.cbMaminha_CheckedChanged);
             // 
             // cbLinguica
             // 
@@ -125,6 +127,7 @@
             this.cbLinguica.TabIndex = 7;
             this.cbLinguica.Text = "Linguiça";
             this.cbLinguica.UseVisualStyleBackColor = true;
+            this.cbLinguica.CheckedChanged += new System.EventHandler(this.cbLinguica_CheckedChanged);
             // 
             // cbPicanha
             // 
@@ -135,6 +138,7 @@
             this.cbPicanha.TabIndex = 8;
             this.cbPicanha.Text = "Picanha";
             this.cbPicanha.UseVisualStyleBackColor = true;
+            this.cbPicanha.CheckedChanged += new System.EventHandler(this.cbPicanha_CheckedChanged);
             // 
             // cbPaes
             // 
@@ -178,6 +182,7 @@
             // 
             // txtRefrigerante
             // 
+            this.txtRefrigerante.Enabled = false;
             this.txtRefrigerante.Location = new System.Drawing.Point(136, 220);
             this.txtRefrigerante.Name = "txtRefrigerante";
             this.txtRefrigerante.Size = new System.Drawing.Size(100, 20);
@@ -186,6 +191,7 @@
             // 
             // txtTotal
             // 
+            this.txtTotal.Enabled = false;
             this.txtTotal.Location = new System.Drawing.Point(95, 263);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(41, 20);
@@ -229,6 +235,7 @@
             // 
             // txtPicanha
             // 
+            this.txtPicanha.Enabled = false;
             this.txtPicanha.Location = new System.Drawing.Point(228, 45);
             this.txtPicanha.Name = "txtPicanha";
             this.txtPicanha.Size = new System.Drawing.Size(70, 20);
@@ -237,6 +244,7 @@
             // 
             // txtFrango
             // 
+            this.txtFrango.Enabled = false;
             this.txtFrango.Location = new System.Drawing.Point(77, 19);
             this.txtFrango.Name = "txtFrango";
             this.txtFrango.Size = new System.Drawing.Size(70, 20);
@@ -245,6 +253,7 @@
             // 
             // txtMaminha
             // 
+            this.txtMaminha.Enabled = false;
             this.txtMaminha.Location = new System.Drawing.Point(228, 17);
             this.txtMaminha.Name = "txtMaminha";
             this.txtMaminha.Size = new System.Drawing.Size(70, 20);
@@ -253,6 +262,7 @@
             // 
             // txtLinguica
             // 
+            this.txtLinguica.Enabled = false;
             this.txtLinguica.Location = new System.Drawing.Point(77, 46);
             this.txtLinguica.Name = "txtLinguica";
             this.txtLinguica.Size = new System.Drawing.Size(70, 20);
@@ -276,37 +286,41 @@
             this.gpOutros.TabStop = false;
             this.gpOutros.Text = "Outros:";
             // 
-            // txtPaes
+            // txtGelo
             // 
-            this.txtPaes.Location = new System.Drawing.Point(78, 16);
-            this.txtPaes.Name = "txtPaes";
-            this.txtPaes.Size = new System.Drawing.Size(70, 20);
-            this.txtPaes.TabIndex = 19;
-            this.txtPaes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtCarvao
-            // 
-            this.txtCarvao.Location = new System.Drawing.Point(78, 43);
-            this.txtCarvao.Name = "txtCarvao";
-            this.txtCarvao.Size = new System.Drawing.Size(70, 20);
-            this.txtCarvao.TabIndex = 20;
-            this.txtCarvao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtGelo.Enabled = false;
+            this.txtGelo.Location = new System.Drawing.Point(229, 46);
+            this.txtGelo.Name = "txtGelo";
+            this.txtGelo.Size = new System.Drawing.Size(70, 20);
+            this.txtGelo.TabIndex = 22;
+            this.txtGelo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtFarofa
             // 
+            this.txtFarofa.Enabled = false;
             this.txtFarofa.Location = new System.Drawing.Point(229, 19);
             this.txtFarofa.Name = "txtFarofa";
             this.txtFarofa.Size = new System.Drawing.Size(70, 20);
             this.txtFarofa.TabIndex = 21;
             this.txtFarofa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtGelo
+            // txtCarvao
             // 
-            this.txtGelo.Location = new System.Drawing.Point(229, 46);
-            this.txtGelo.Name = "txtGelo";
-            this.txtGelo.Size = new System.Drawing.Size(70, 20);
-            this.txtGelo.TabIndex = 22;
-            this.txtGelo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCarvao.Enabled = false;
+            this.txtCarvao.Location = new System.Drawing.Point(78, 43);
+            this.txtCarvao.Name = "txtCarvao";
+            this.txtCarvao.Size = new System.Drawing.Size(70, 20);
+            this.txtCarvao.TabIndex = 20;
+            this.txtCarvao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtPaes
+            // 
+            this.txtPaes.Enabled = false;
+            this.txtPaes.Location = new System.Drawing.Point(78, 16);
+            this.txtPaes.Name = "txtPaes";
+            this.txtPaes.Size = new System.Drawing.Size(70, 20);
+            this.txtPaes.TabIndex = 19;
+            this.txtPaes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmChurrasco
             // 
@@ -331,6 +345,7 @@
             this.Name = "frmChurrasco";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculadora Churrasco";
+            this.Load += new System.EventHandler(this.frmChurrasco_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numPessoas)).EndInit();
             this.gpCarnes.ResumeLayout(false);
             this.gpCarnes.PerformLayout();

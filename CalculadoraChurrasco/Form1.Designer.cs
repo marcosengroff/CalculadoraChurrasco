@@ -149,6 +149,7 @@
             this.cbPaes.TabIndex = 9;
             this.cbPaes.Text = "Pães";
             this.cbPaes.UseVisualStyleBackColor = true;
+            this.cbPaes.CheckedChanged += new System.EventHandler(this.cbPaes_CheckedChanged);
             // 
             // cbFarofa
             // 
@@ -159,6 +160,7 @@
             this.cbFarofa.TabIndex = 10;
             this.cbFarofa.Text = "Farofa ";
             this.cbFarofa.UseVisualStyleBackColor = true;
+            this.cbFarofa.CheckedChanged += new System.EventHandler(this.cbFarofa_CheckedChanged);
             // 
             // cbCarvao
             // 
@@ -169,6 +171,7 @@
             this.cbCarvao.TabIndex = 11;
             this.cbCarvao.Text = "Carvão";
             this.cbCarvao.UseVisualStyleBackColor = true;
+            this.cbCarvao.CheckedChanged += new System.EventHandler(this.cbCarvao_CheckedChanged);
             // 
             // cbGelo
             // 
@@ -179,6 +182,7 @@
             this.cbGelo.TabIndex = 12;
             this.cbGelo.Text = "Gelo";
             this.cbGelo.UseVisualStyleBackColor = true;
+            this.cbGelo.CheckedChanged += new System.EventHandler(this.cbGelo_CheckedChanged);
             // 
             // txtRefrigerante
             // 
@@ -188,6 +192,7 @@
             this.txtRefrigerante.Size = new System.Drawing.Size(100, 20);
             this.txtRefrigerante.TabIndex = 13;
             this.txtRefrigerante.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtRefrigerante.TextChanged += new System.EventHandler(this.txtRefrigerante_TextChanged);
             // 
             // txtTotal
             // 
@@ -207,6 +212,7 @@
             this.cbRefrigerante.TabIndex = 15;
             this.cbRefrigerante.Text = "Refrigerante em lata";
             this.cbRefrigerante.UseVisualStyleBackColor = true;
+            this.cbRefrigerante.CheckedChanged += new System.EventHandler(this.cbRefrigerante_CheckedChanged);
             // 
             // numPessoas
             // 
@@ -294,6 +300,7 @@
             this.txtGelo.Size = new System.Drawing.Size(70, 20);
             this.txtGelo.TabIndex = 22;
             this.txtGelo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtGelo.TextChanged += new System.EventHandler(this.txtGelo_TextChanged);
             // 
             // txtFarofa
             // 
@@ -303,6 +310,7 @@
             this.txtFarofa.Size = new System.Drawing.Size(70, 20);
             this.txtFarofa.TabIndex = 21;
             this.txtFarofa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtFarofa.TextChanged += new System.EventHandler(this.txtFarofa_TextChanged);
             // 
             // txtCarvao
             // 
@@ -312,6 +320,7 @@
             this.txtCarvao.Size = new System.Drawing.Size(70, 20);
             this.txtCarvao.TabIndex = 20;
             this.txtCarvao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCarvao.TextChanged += new System.EventHandler(this.txtCarvao_TextChanged);
             // 
             // txtPaes
             // 
@@ -321,6 +330,7 @@
             this.txtPaes.Size = new System.Drawing.Size(70, 20);
             this.txtPaes.TabIndex = 19;
             this.txtPaes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPaes.TextChanged += new System.EventHandler(this.txtPaes_TextChanged);
             // 
             // frmChurrasco
             // 

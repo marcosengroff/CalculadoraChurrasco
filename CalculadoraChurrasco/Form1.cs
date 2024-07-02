@@ -69,12 +69,98 @@ namespace CalculadoraChurrasco
             if (cbPicanha.Checked == true)
             {
                 txtPicanha.Text = numPessoas.Value * 0.300m + "kg";
-                txtTotal.Text = Convert.ToString(Convert.ToDecimal(txtTotal.Text) + numPessoas.Value * 5);
+                txtTotal.Text = Convert.ToString(Convert.ToDecimal(txtTotal.Text) + numPessoas.Value * 6);
             }
             else if (txtPicanha.Text != "")
             {
-                txtTotal.Text = Convert.ToString(Convert.ToDecimal(txtTotal.Text) - numPessoas.Value * 5);
+                txtTotal.Text = Convert.ToString(Convert.ToDecimal(txtTotal.Text) - numPessoas.Value * 6);
                 txtPicanha.Clear();
+            }
+        }
+
+        private void txtPaes_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtFarofa_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtCarvao_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtGelo_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtRefrigerante_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbRefrigerante_CheckedChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void cbPaes_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbPaes.Checked == true)
+            {
+                txtPaes.Text = numPessoas.Value + "Un";
+                txtTotal.Text = Convert.ToString(Convert.ToDecimal(txtTotal.Text) + numPessoas.Value * 0.5m);
+            }
+            else if (txtPaes.Text != "")
+            {
+                txtTotal.Text = Convert.ToString(Convert.ToDecimal(txtTotal.Text) - numPessoas.Value * 0.5m);
+                txtPaes.Clear();
+            }
+        }
+
+        private void cbFarofa_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbFarofa.Checked == true)
+            {
+                txtFarofa.Text = "1 pct";
+                txtTotal.Text = Convert.ToString(Convert.ToDecimal(txtTotal.Text) + numPessoas.Value * 2.5m);
+            }
+            else if (txtFarofa.Text != "")
+            {
+                txtTotal.Text = Convert.ToString(Convert.ToDecimal(txtTotal.Text) - numPessoas.Value * 2.5m);
+                txtFarofa.Clear();
+            }
+        }
+
+        private void cbCarvao_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbCarvao.Checked == true)
+            {
+                txtCarvao.Text = "5 Kg";
+                txtTotal.Text = Convert.ToString(Convert.ToDecimal(txtTotal.Text) + numPessoas.Value * 5m);
+            }
+            else if (txtCarvao.Text != "")
+            {
+                txtTotal.Text = Convert.ToString(Convert.ToDecimal(txtTotal.Text) - numPessoas.Value * 5m);
+                txtCarvao.Clear();
+            }
+        }
+
+        private void cbGelo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbGelo.Checked == true)
+            {
+                txtGelo.Text = "4 Kg";
+                txtTotal.Text = Convert.ToString(Convert.ToDecimal(txtTotal.Text) + numPessoas.Value * 5m);
+            }
+            else if (txtFarofa.Text != "")
+            {
+                txtTotal.Text = Convert.ToString(Convert.ToDecimal(txtTotal.Text) - numPessoas.Value * 5m);
+                txtGelo.Clear();
             }
         }
     }

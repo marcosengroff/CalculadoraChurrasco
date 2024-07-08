@@ -86,6 +86,7 @@
             this.btnLimpar.TabIndex = 3;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnSair
             // 
@@ -95,6 +96,7 @@
             this.btnSair.TabIndex = 4;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // cbFrango
             // 
@@ -221,6 +223,12 @@
             this.numPessoas.Size = new System.Drawing.Size(35, 20);
             this.numPessoas.TabIndex = 16;
             this.numPessoas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numPessoas.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numPessoas.ValueChanged += new System.EventHandler(this.numPessoas_ValueChanged);
             // 
             // gpCarnes
             // 

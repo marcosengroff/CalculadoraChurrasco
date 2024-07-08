@@ -26,7 +26,7 @@ namespace CalculadoraChurrasco
         {
             if (cbFrango.Checked == true)
             {
-                txtFrango.Text = numPessoas.Value * 0.100m + "kg";
+                txtFrango.Text = numPessoas.Value * 0.100m + " kg";
                 txtTotal.Text = Convert.ToString(Convert.ToDecimal(txtTotal.Text) + numPessoas.Value * 1);
             }
             else if (txtFrango.Text != "")
@@ -40,7 +40,7 @@ namespace CalculadoraChurrasco
         {
             if (cbLinguica.Checked == true)
             {
-                txtLinguica.Text = numPessoas.Value * 0.200m + "kg";
+                txtLinguica.Text = numPessoas.Value * 0.200m + " kg";
                 txtTotal.Text = Convert.ToString(Convert.ToDecimal(txtTotal.Text) + numPessoas.Value * 2);
             }
             else if (txtLinguica.Text != "")
@@ -54,7 +54,7 @@ namespace CalculadoraChurrasco
         {
             if (cbMaminha.Checked == true)
             {
-                txtMaminha.Text = numPessoas.Value * 0.150m + "kg";
+                txtMaminha.Text = numPessoas.Value * 0.150m + " kg";
                 txtTotal.Text = Convert.ToString(Convert.ToDecimal(txtTotal.Text) + numPessoas.Value * 3);
             }
             else if (txtMaminha.Text != "")
@@ -68,7 +68,7 @@ namespace CalculadoraChurrasco
         {
             if (cbPicanha.Checked == true)
             {
-                txtPicanha.Text = numPessoas.Value * 0.300m + "kg";
+                txtPicanha.Text = numPessoas.Value * 0.300m + " kg";
                 txtTotal.Text = Convert.ToString(Convert.ToDecimal(txtTotal.Text) + numPessoas.Value * 6);
             }
             else if (txtPicanha.Text != "")
@@ -105,14 +105,23 @@ namespace CalculadoraChurrasco
 
         private void cbRefrigerante_CheckedChanged(object sender, EventArgs e)
         {
-           
+           if (cbRefrigerante.Checked == true)
+            {
+                txtRefrigerante.Text = numPessoas.Value * 2m + " Latas";
+                txtTotal.Text = Convert.ToString(Convert.ToDecimal(txtTotal.Text) + numPessoas.Value * 3);
+            }
+           else if (txtRefrigerante.Text != "")
+            {
+                txtTotal.Text = Convert.ToString(Convert.ToDecimal(txtTotal.Text) + numPessoas.Value * 3);
+                txtRefrigerante.Clear();
+            }
         }
 
         private void cbPaes_CheckedChanged(object sender, EventArgs e)
         {
             if (cbPaes.Checked == true)
             {
-                txtPaes.Text = numPessoas.Value + "Un";
+                txtPaes.Text = numPessoas.Value + " Un";
                 txtTotal.Text = Convert.ToString(Convert.ToDecimal(txtTotal.Text) + numPessoas.Value * 0.5m);
             }
             else if (txtPaes.Text != "")
@@ -157,11 +166,46 @@ namespace CalculadoraChurrasco
                 txtGelo.Text = "4 Kg";
                 txtTotal.Text = Convert.ToString(Convert.ToDecimal(txtTotal.Text) + numPessoas.Value * 5m);
             }
-            else if (txtFarofa.Text != "")
+            else if (txtGelo.Text != "")
             {
                 txtTotal.Text = Convert.ToString(Convert.ToDecimal(txtTotal.Text) - numPessoas.Value * 5m);
                 txtGelo.Clear();
             }
+        }
+
+        private void numPessoas_ValueChanged(object sender, EventArgs e)
+        {
+            txtTotal.Text = 0.ToString();   
+            cbFrango_CheckedChanged(sender, e);
+            cbLinguica_CheckedChanged(sender, e);
+            cbMaminha_CheckedChanged(sender, e);
+            cbPicanha_CheckedChanged(sender, e);
+            cbPaes_CheckedChanged(sender, e);
+            cbCarvao_CheckedChanged(sender, e);
+            cbFarofa_CheckedChanged(sender, e);
+            cbGelo_CheckedChanged(sender, e);
+            cbRefrigerante_CheckedChanged(sender, e);
+            
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            numPessoas.Value = 1;
+            cbFrango.Checked = false;
+            cbLinguica.Checked = false;
+            cbMaminha.Checked = false;
+            cbPicanha.Checked = false;
+            cbPaes.Checked = false;
+            cbCarvao.Checked = false;
+            cbFarofa.Checked = false;
+            cbGelo.Checked = false;
+            cbRefrigerante.Checked = false;
+            txtTotal.Text = "0";
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
